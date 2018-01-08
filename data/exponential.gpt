@@ -1,0 +1,8 @@
+set terminal fig color textspecial
+set noxtics
+set noytics
+set xrange [0:10]
+set xlabel "Symbol"
+set ylabel "Probability"
+set output "exponential.fig"
+plot exp(-x) title "$\\lambda=1$", 0.5*exp(-x/2) title "$\\lambda=0.5$", 1.5*exp(-1.5*x) title "$\\lambda=1.5$"

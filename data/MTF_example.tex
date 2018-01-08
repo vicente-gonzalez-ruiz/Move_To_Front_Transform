@@ -1,0 +1,25 @@
+\documentclass{article}
+\begin{document}
+\thispagestyle{empty}
+\begin{tabular}{ccc}
+ $L$ & Input & Output \\
+\hline
+{\tt $\cdots$abc$\cdots$} & {\tt b} &  {\tt b}\\
+{\tt b$\cdots$ac$\cdots$} & {\tt a} &  {\tt b}\\
+{\tt ab$\cdots$c$\cdots$} & {\tt a} &     0\\
+{\tt ab$\cdots$c$\cdots$} & {\tt a} &     0\\
+{\tt ab$\cdots$c$\cdots$} & {\tt a} &     0\\
+{\tt ab$\cdots$c$\cdots$} & {\tt a} &     0\\
+{\tt ab$\cdots$c$\cdots$} & {\tt a} &     0\\
+{\tt ab$\cdots$c$\cdots$} & {\tt b} &     1\\
+{\tt ba$\cdots$c$\cdots$} & {\tt b} &     0\\
+{\tt ba$\cdots$c$\cdots$} & {\tt a} &     1\\
+{\tt ab$\cdots$c$\cdots$} & {\tt b} &     1\\
+{\tt ba$\cdots$c$\cdots$} & {\tt a} &     1\\
+{\tt ab$\cdots$c$\cdots$} & {\tt a} &     0\\
+{\tt ab$\cdots$c$\cdots$} & {\tt c} &   {\tt c}\\
+{\tt cab$\cdots$$\cdots$} & {\tt a} &     1\\    
+{\tt acb$\cdots$$\cdots$} & {\tt a} &     0\\
+%{\tt acb$\cdots$$\cdots$} & {\tt b} &     1
+\end{tabular}
+\end{document}
