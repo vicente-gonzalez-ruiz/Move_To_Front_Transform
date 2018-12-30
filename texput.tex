@@ -1,0 +1,90 @@
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "<none>"
+%%% End:
+
+\title{Move-to-front transform}
+
+\author{Vicente González Ruiz}
+
+\maketitle
+
+\section{Basics}
+\begin{itemize}
+\item
+  MTF transform~\cite{manzini2001analysis} performs a change in the
+  representation of the symbols of a sequence, where those symbols
+  that have a high probability of occurrency are ``moved'' in the
+  source alphabet towards decreasing positions.  Therefore, MTFT
+  inputs \(N\) symbols and output \(N\) symbols.
+\item
+  The output sequence has a probability density function which follows
+  an exponential distribution with a slope \(\lambda\):
+
+  \begin{equation}
+    f(x) = \left\{
+      \begin{array}{ll}
+        \lambda e^{-\lambda x} & \mbox{if $x \geq 0$};\\
+        0 & \mbox{if $x < 0$}.
+      \end{array} \right.
+  \end{equation}
+  \img{600}{graphics/exponential.png}
+  where \(\lambda\) depends on the probability of ocurrence of the input
+  symbols.
+\end{itemize}
+
+\section{Forward transform}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a list \(L\) with the symbols of the source alphabet, where
+  \[L[s]\leftarrow s; 0\le s\le r.\]
+\item
+  While the input is not exhausted:
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    \(s\leftarrow\) next input symbol.
+  \item
+    \(c\leftarrow\) position of \(s\) in \(L\) (\(L[c]=s\)).
+  \item
+    Output \(\leftarrow c\).
+  \item
+    Move \(s\) to the front of \(L\).
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{Example}
+\img{250}{graphics/MTF_example.png}
+
+\section{Inverse transform}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The step 1 of the forward transform.
+\item
+  While the input is not exausted:
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    \(c\leftarrow\) next input code.
+  \item
+    \(s\leftarrow L[c]\).
+  \item
+    Output \(s\).
+  \item
+    The step 2.C of the forward transform.
+  \end{enumerate}
+\end{enumerate}
+
+\subsection{Example}
+TO-DO
+
+\section{Lab}
+TO-DO
+
+\bibliography{text-compression}
