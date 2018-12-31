@@ -1,1 +1,1 @@
-[Click me](https://cdn.rawgit.com/vicente-gonzalez-ruiz/move-to-front_transform/master/index.html).
+[Click me](https://vicente-gonzalez-ruiz.github.io/move-to-front_transform/).
